@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FrontPage from './components/FrontPage';
 import Notes from './components/Notes';
 import './App.css';
 
@@ -24,20 +26,25 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <button 
-        className="theme-toggle" 
-        onClick={toggleTheme}
-        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-      >
-        <span className="theme-toggle-icon">
-          {theme === 'light' ? '🌙' : '☀️'}
-        </span>
-        {theme === 'light' ? 'Dark' : 'Light'}
-      </button>
-      
-      <Notes />
-    </div>
+    <Router>
+      <div className="App">
+        <button 
+          className="theme-toggle" 
+          onClick={toggleTheme}
+          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        >
+          <span className="theme-toggle-icon">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </span>
+          {theme === 'light' ? 'Dark' : 'Light'}
+        </button>
+        
+        <Routes>
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/notes" element={<Notes />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

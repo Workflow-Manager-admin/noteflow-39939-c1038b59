@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navigation from './Navigation';
 import NoteCard from './NoteCard';
 import NoteModal from './NoteModal';
 import LoadingSpinner from './LoadingSpinner';
@@ -131,8 +132,10 @@ const Notes = () => {
   );
 
   return (
-    <div className="notes-container">
-      <Toast toasts={toasts} onRemove={removeToast} />
+    <>
+      <Navigation />
+      <div className="notes-container">
+        <Toast toasts={toasts} onRemove={removeToast} />
       
       <div className="notes-header">
         <div className="notes-header-content">
@@ -224,7 +227,8 @@ const Notes = () => {
         note={editingNote}
         isLoading={isModalLoading}
       />
-    </div>
+      </div>
+    </>
   );
 };
 
