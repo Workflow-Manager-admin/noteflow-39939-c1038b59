@@ -200,13 +200,18 @@ const Notes = () => {
           </div>
         ) : (
           <div className="notes-grid">
-            {filteredNotes.map((note) => (
-              <NoteCard
-                key={note.id}
-                note={note}
-                onEdit={handleEditNote}
-                onDelete={handleDeleteNote}
-              />
+            {filteredNotes.map((note, index) => (
+              <div 
+                key={note.id} 
+                className="fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <NoteCard
+                  note={note}
+                  onEdit={handleEditNote}
+                  onDelete={handleDeleteNote}
+                />
+              </div>
             ))}
           </div>
         )}

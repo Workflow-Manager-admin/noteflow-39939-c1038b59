@@ -42,60 +42,93 @@
 }
 
 .search-input {
-  padding: 12px 16px 12px 44px;
+  padding: 14px 18px 14px 48px;
   border: 2px solid var(--border-color);
-  border-radius: 25px;
-  font-size: 14px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--text-primary);
   background-color: var(--bg-primary);
-  transition: all 0.3s ease;
-  width: 280px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 320px;
   box-sizing: border-box;
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.search-input:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-light);
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
 }
 
 [data-theme="dark"] .search-input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
 
 .search-icon {
   position: absolute;
-  left: 16px;
-  font-size: 16px;
-  color: var(--text-secondary);
+  left: 18px;
+  font-size: 18px;
+  color: var(--text-muted);
   pointer-events: none;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-input:focus + .search-icon {
+  color: var(--accent-primary);
 }
 
 .fab {
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, var(--accent-primary), var(--button-bg-hover));
   color: white;
   border: none;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 300;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.fab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fab:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.4);
+}
+
+.fab:hover::before {
+  opacity: 1;
 }
 
 .fab:active {
-  transform: translateY(0) scale(0.95);
+  transform: translateY(-1px) scale(1.02);
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .notes-content {
@@ -172,12 +205,27 @@
 
 .notes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
   margin-bottom: 40px;
 }
 
+.notes-grid .note-card:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.notes-grid .note-card:nth-child(3n) {
+  animation-delay: 0.2s;
+}
+
 /* Responsive design */
+@media (max-width: 1200px) {
+  .notes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+}
+
 @media (max-width: 1024px) {
   .notes-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -206,13 +254,20 @@
   }
   
   .search-input {
-    width: 220px;
+    width: 240px;
+    padding: 12px 16px 12px 44px;
+    font-size: 14px;
+  }
+  
+  .search-icon {
+    left: 16px;
+    font-size: 16px;
   }
   
   .fab {
-    width: 52px;
-    height: 52px;
-    font-size: 20px;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
   }
   
   .notes-grid {
@@ -234,18 +289,36 @@
 }
 
 @media (max-width: 480px) {
+  .notes-container {
+    padding: 12px;
+  }
+  
+  .notes-header {
+    margin-bottom: 20px;
+  }
+  
+  .notes-header-content h1 {
+    font-size: 24px;
+  }
+  
   .search-input {
-    width: 180px;
-    padding: 10px 12px 10px 40px;
+    width: 200px;
+    padding: 10px 14px 10px 40px;
+    font-size: 13px;
   }
   
   .search-icon {
-    left: 12px;
+    left: 14px;
+    font-size: 14px;
   }
   
   .fab {
-    width: 48px;
-    height: 48px;
-    font-size: 18px;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+  
+  .notes-grid {
+    gap: 12px;
   }
 }

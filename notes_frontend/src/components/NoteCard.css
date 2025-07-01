@@ -1,25 +1,43 @@
 .note-card {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 24px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px var(--shadow-light);
   position: relative;
-  min-height: 200px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.note-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .note-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: #2563eb;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-medium);
+  border-color: var(--accent-primary);
 }
 
-[data-theme="dark"] .note-card:hover {
-  border-color: #3b82f6;
+.note-card:hover::before {
+  opacity: 1;
+}
+
+.note-card:active {
+  transform: translateY(-2px) scale(1.01);
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .note-card-header {
@@ -31,13 +49,17 @@
 }
 
 .note-card-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   color: var(--text-primary);
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.4;
   flex: 1;
-  padding-right: 10px;
+  padding-right: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .note-card-menu {
@@ -47,59 +69,75 @@
 .note-card-menu-trigger {
   background: none;
   border: none;
-  color: var(--text-secondary);
-  font-size: 20px;
+  color: var(--text-muted);
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   line-height: 1;
+  opacity: 0.7;
+}
+
+.note-card:hover .note-card-menu-trigger {
+  opacity: 1;
 }
 
 .note-card-menu-trigger:hover {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
+  transform: scale(1.1);
 }
 
 .note-card-menu-dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px);
   right: 0;
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px var(--shadow-medium);
   z-index: 10;
-  min-width: 120px;
+  min-width: 140px;
   overflow: hidden;
+  animation: scaleIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .menu-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px 16px;
   background: none;
   border: none;
   color: var(--text-primary);
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: left;
 }
 
 .menu-item:hover {
   background-color: var(--bg-secondary);
+  transform: translateX(2px);
 }
 
 .menu-item-danger {
-  color: #ef4444;
+  color: var(--error);
 }
 
 .menu-item-danger:hover {
   background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+[data-theme="dark"] .menu-item-danger:hover {
+  background-color: rgba(248, 113, 113, 0.15);
 }
 
 .menu-icon {
@@ -108,34 +146,71 @@
 
 .note-card-content {
   flex: 1;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  margin-top: 4px;
 }
 
 .note-card-content p {
-  color: var(--text-primary);
-  font-size: 14px;
+  color: var(--text-secondary);
+  font-size: 15px;
   line-height: 1.6;
   margin: 0;
-  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .note-card-footer {
   margin-top: auto;
-  padding-top: 12px;
+  padding-top: 16px;
   border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .note-card-date {
-  font-size: 12px;
-  color: var(--text-secondary);
+  font-size: 13px;
+  color: var(--text-muted);
   font-weight: 500;
+}
+
+.note-card-status {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .note-card {
-    padding: 16px;
-    min-height: 160px;
+    padding: 20px;
+    min-height: 200px;
+  }
+  
+  .note-card-title {
+    font-size: 17px;
+  }
+  
+  .note-card-content p {
+    font-size: 14px;
+  }
+  
+  .note-card-menu-dropdown {
+    right: -5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .note-card {
+    padding: 18px;
+    min-height: 180px;
   }
   
   .note-card-title {
@@ -144,9 +219,5 @@
   
   .note-card-content p {
     font-size: 13px;
-  }
-  
-  .note-card-menu-dropdown {
-    right: -5px;
   }
 }

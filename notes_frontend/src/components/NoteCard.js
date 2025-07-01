@@ -79,6 +79,9 @@ const NoteCard = ({ note, onEdit, onDelete }) => {
         <time className="note-card-date">
           {formatDate(note.created_at || note.timestamp)}
         </time>
+        <span className="note-card-status">
+          Note
+        </span>
       </div>
     </div>
   );

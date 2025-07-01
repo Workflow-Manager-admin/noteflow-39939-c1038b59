@@ -30,7 +30,10 @@ function App() {
         onClick={toggleTheme}
         aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
       >
-        {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+        <span className="theme-toggle-icon">
+          {theme === 'light' ? '🌙' : '☀️'}
+        </span>
+        {theme === 'light' ? 'Dark' : 'Light'}
       </button>
       
       <Notes />
