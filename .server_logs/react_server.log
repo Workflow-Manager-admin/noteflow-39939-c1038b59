@@ -6,9 +6,9 @@ Attempting to bind to HOST environment variable: 0.0.0.0
 If this was unintentional, check that you haven't mistakenly set it in your shell.
 Learn more here: https://cra.link/advanced-config
 
-(node:12751) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:15372) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:12751) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:15372) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
 Compiled with warnings.
@@ -17,18 +17,12 @@ Compiled with warnings.
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
-
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
 WARNING in [eslint] 
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
 
 webpack compiled with 1 warning
 Compiling...
@@ -38,9 +32,6 @@ Compiled with warnings.
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
-
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
@@ -48,8 +39,28 @@ WARNING in [eslint]
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 3:10:  'FiSun' is defined but never used   no-unused-vars
+  Line 3:17:  'FiMoon' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 3:10:  'FiSun' is defined but never used   no-unused-vars
+  Line 3:17:  'FiMoon' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning
 Compiling...
@@ -59,9 +70,6 @@ Compiled with warnings.
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
-
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
@@ -69,8 +77,82 @@ WARNING in [eslint]
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/FrontPage.js
+  Line 3:10:  'FiBook' is defined but never used        no-unused-vars
+  Line 3:18:  'FiEdit' is defined but never used        no-unused-vars
+  Line 3:26:  'FiSettings' is defined but never used    no-unused-vars
+  Line 3:38:  'FiSmartphone' is defined but never used  no-unused-vars
+  Line 3:52:  'FiArrowRight' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/FrontPage.js
+  Line 3:10:  'FiBook' is defined but never used        no-unused-vars
+  Line 3:18:  'FiEdit' is defined but never used        no-unused-vars
+  Line 3:26:  'FiSettings' is defined but never used    no-unused-vars
+  Line 3:38:  'FiSmartphone' is defined but never used  no-unused-vars
+  Line 3:52:  'FiArrowRight' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/FrontPage.js
+  Line 3:18:  'FiEdit' is defined but never used        no-unused-vars
+  Line 3:26:  'FiSettings' is defined but never used    no-unused-vars
+  Line 3:38:  'FiSmartphone' is defined but never used  no-unused-vars
+  Line 3:52:  'FiArrowRight' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/FrontPage.js
+  Line 3:18:  'FiEdit' is defined but never used        no-unused-vars
+  Line 3:26:  'FiSettings' is defined but never used    no-unused-vars
+  Line 3:38:  'FiSmartphone' is defined but never used  no-unused-vars
+  Line 3:52:  'FiArrowRight' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/FrontPage.js
+  Line 3:52:  'FiArrowRight' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/FrontPage.js
+  Line 3:52:  'FiArrowRight' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning
 Compiling...
@@ -80,9 +162,6 @@ Compiled with warnings.
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
-
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
@@ -90,8 +169,28 @@ WARNING in [eslint]
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Navigation.js
+  Line 3:10:  'FiArrowLeft' is defined but never used  no-unused-vars
+  Line 3:23:  'FiBook' is defined but never used       no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Navigation.js
+  Line 3:10:  'FiArrowLeft' is defined but never used  no-unused-vars
+  Line 3:23:  'FiBook' is defined but never used       no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning
 Compiling...
@@ -101,9 +200,6 @@ Compiled with warnings.
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
-
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
@@ -111,8 +207,30 @@ WARNING in [eslint]
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/NoteCard.js
+  Line 2:10:  'FiMoreVertical' is defined but never used  no-unused-vars
+  Line 2:26:  'FiEdit' is defined but never used          no-unused-vars
+  Line 2:34:  'FiTrash2' is defined but never used        no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/NoteCard.js
+  Line 2:10:  'FiMoreVertical' is defined but never used  no-unused-vars
+  Line 2:26:  'FiEdit' is defined but never used          no-unused-vars
+  Line 2:34:  'FiTrash2' is defined but never used        no-unused-vars
+
+src/components/Notes.js
+  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning
 Compiling...
@@ -122,18 +240,12 @@ Compiled with warnings.
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
-
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
 WARNING in [eslint] 
 src/components/Notes.js
   Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
 
 webpack compiled with 1 warning
 Compiling...
@@ -141,20 +253,20 @@ Compiled with warnings.
 
 [eslint] 
 src/components/Notes.js
-  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+  Line 2:10:  'FiSearch' is defined but never used                                                                          no-unused-vars
+  Line 2:20:  'FiPlus' is defined but never used                                                                            no-unused-vars
+  Line 2:28:  'FiBook' is defined but never used                                                                            no-unused-vars
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
 WARNING in [eslint] 
 src/components/Notes.js
-  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+  Line 2:10:  'FiSearch' is defined but never used                                                                          no-unused-vars
+  Line 2:20:  'FiPlus' is defined but never used                                                                            no-unused-vars
+  Line 2:28:  'FiBook' is defined but never used                                                                            no-unused-vars
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning
 Compiling...
@@ -162,20 +274,16 @@ Compiled with warnings.
 
 [eslint] 
 src/components/Notes.js
-  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+  Line 2:28:  'FiBook' is defined but never used                                                                            no-unused-vars
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
 WARNING in [eslint] 
 src/components/Notes.js
-  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+  Line 2:28:  'FiBook' is defined but never used                                                                            no-unused-vars
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning
 Compiling...
@@ -183,19 +291,91 @@ Compiled with warnings.
 
 [eslint] 
 src/components/Notes.js
-  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
 WARNING in [eslint] 
 src/components/Notes.js
-  Line 27:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-src/services/notesApi.js
-  Line 111:1:  Assign instance to a variable before exporting as module default  import/no-anonymous-default-export
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/Toast.js
+  Line 2:10:  'FiCheck' is defined but never used          no-unused-vars
+  Line 2:19:  'FiX' is defined but never used              no-unused-vars
+  Line 2:24:  'FiAlertTriangle' is defined but never used  no-unused-vars
+  Line 2:41:  'FiInfo' is defined but never used           no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/Toast.js
+  Line 2:10:  'FiCheck' is defined but never used          no-unused-vars
+  Line 2:19:  'FiX' is defined but never used              no-unused-vars
+  Line 2:24:  'FiAlertTriangle' is defined but never used  no-unused-vars
+  Line 2:41:  'FiInfo' is defined but never used           no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/NoteModal.js
+  Line 2:10:  'FiX' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/NoteModal.js
+  Line 2:10:  'FiX' is defined but never used  no-unused-vars
+
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Notes.js
+  Line 28:6:  React Hook useEffect has a missing dependency: 'loadNotes'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 webpack compiled with 1 warning

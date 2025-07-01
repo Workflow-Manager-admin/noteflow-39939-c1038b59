@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FiSearch, FiPlus, FiBook } from 'react-icons/fi';
 import Navigation from './Navigation';
 import NoteCard from './NoteCard';
 import NoteModal from './NoteModal';
@@ -154,7 +155,7 @@ const Notes = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input"
             />
-            <span className="search-icon">⌕</span>
+            <span className="search-icon"><FiSearch /></span>
           </div>
           
           <button 
@@ -162,7 +163,7 @@ const Notes = () => {
             onClick={handleCreateNote}
             aria-label="Create new note"
           >
-            +
+            <FiPlus />
           </button>
         </div>
       </div>
@@ -177,7 +178,7 @@ const Notes = () => {
           <div className="empty-state">
             {searchQuery ? (
               <>
-                <div className="empty-icon">Search</div>
+                <div className="empty-icon"><FiSearch /></div>
                 <h3>No notes found</h3>
                 <p>No notes match your search query "{searchQuery}"</p>
                 <button 
@@ -189,7 +190,7 @@ const Notes = () => {
               </>
             ) : (
               <>
-                <div className="empty-icon">Notes</div>
+                <div className="empty-icon"><FiBook /></div>
                 <h3>No notes yet</h3>
                 <p>Create your first note to get started!</p>
                 <button 

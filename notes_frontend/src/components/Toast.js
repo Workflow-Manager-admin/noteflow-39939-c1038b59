@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiCheck, FiX, FiAlertTriangle, FiInfo } from 'react-icons/fi';
 import './Toast.css';
 
 // PUBLIC_INTERFACE
@@ -20,10 +21,10 @@ const Toast = ({ toasts, onRemove }) => {
         >
           <div className="toast-content">
             <span className="toast-icon">
-              {toast.type === 'success' && '✓'}
-              {toast.type === 'error' && '✕'}
-              {toast.type === 'warning' && '⚠'}
-              {toast.type === 'info' && 'ℹ'}
+              {toast.type === 'success' && <FiCheck />}
+              {toast.type === 'error' && <FiX />}
+              {toast.type === 'warning' && <FiAlertTriangle />}
+              {toast.type === 'info' && <FiInfo />}
             </span>
             <span className="toast-message">{toast.message}</span>
           </div>
@@ -35,7 +36,7 @@ const Toast = ({ toasts, onRemove }) => {
             }}
             aria-label="Close notification"
           >
-            ×
+            <FiX />
           </button>
         </div>
       ))}

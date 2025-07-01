@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FiMoreVertical, FiEdit, FiTrash2 } from 'react-icons/fi';
 import './NoteCard.css';
 
 // PUBLIC_INTERFACE
@@ -54,16 +55,16 @@ const NoteCard = ({ note, onEdit, onDelete }) => {
             onClick={handleMenuToggle}
             aria-label="Note options"
           >
-            ⋮
+            <FiMoreVertical />
           </button>
           {showMenu && (
             <div className="note-card-menu-dropdown">
               <button onClick={handleEdit} className="menu-item">
-                <span className="menu-icon">Edit</span>
+                <span className="menu-icon"><FiEdit /></span>
                 Edit
               </button>
               <button onClick={handleDelete} className="menu-item menu-item-danger">
-                <span className="menu-icon">Del</span>
+                <span className="menu-icon"><FiTrash2 /></span>
                 Delete
               </button>
             </div>

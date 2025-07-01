@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { FiSun, FiMoon } from 'react-icons/fi';
 import FrontPage from './components/FrontPage';
 import Notes from './components/Notes';
 import './App.css';
@@ -34,7 +35,7 @@ function App() {
           aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
         >
           <span className="theme-toggle-icon">
-            {theme === 'light' ? '●' : '○'}
+            {theme === 'light' ? <FiMoon /> : <FiSun />}
           </span>
           {theme === 'light' ? 'Dark' : 'Light'}
         </button>

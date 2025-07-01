@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { FiArrowLeft, FiBook } from 'react-icons/fi';
 import './Navigation.css';
 
 // PUBLIC_INTERFACE
@@ -31,12 +32,12 @@ const Navigation = () => {
           onClick={handleBackToHome}
           aria-label="Back to home"
         >
-          <span className="nav-back-icon">←</span>
+          <span className="nav-back-icon"><FiArrowLeft /></span>
           <span className="nav-back-text">Home</span>
         </button>
         
         <div className="nav-brand">
-          <span className="nav-logo">N</span>
+          <span className="nav-logo"><FiBook /></span>
           <span className="nav-title">Notes Manager</span>
         </div>
         

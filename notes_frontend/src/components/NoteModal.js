@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FiX } from 'react-icons/fi';
 import './NoteModal.css';
 
 // PUBLIC_INTERFACE
@@ -88,7 +89,7 @@ const NoteModal = ({ isOpen, onClose, onSave, note = null, isLoading = false }) 
             aria-label="Close modal"
             disabled={isLoading}
           >
-            ×
+            <FiX />
           </button>
         </div>
         
