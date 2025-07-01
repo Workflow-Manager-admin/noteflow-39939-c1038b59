@@ -34,7 +34,7 @@ function App() {
           aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
         >
           <span className="theme-toggle-icon">
-            {theme === 'light' ? '🌙' : '☀️'}
+            {theme === 'light' ? '●' : '○'}
           </span>
           {theme === 'light' ? 'Dark' : 'Light'}
         </button>

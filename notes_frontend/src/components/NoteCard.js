@@ -59,11 +59,11 @@ const NoteCard = ({ note, onEdit, onDelete }) => {
           {showMenu && (
             <div className="note-card-menu-dropdown">
               <button onClick={handleEdit} className="menu-item">
-                <span className="menu-icon">✏️</span>
+                <span className="menu-icon">Edit</span>
                 Edit
               </button>
               <button onClick={handleDelete} className="menu-item menu-item-danger">
-                <span className="menu-icon">🗑️</span>
+                <span className="menu-icon">Del</span>
                 Delete
               </button>
             </div>

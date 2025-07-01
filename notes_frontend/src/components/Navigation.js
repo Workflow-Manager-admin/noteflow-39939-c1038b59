@@ -36,7 +36,7 @@ const Navigation = () => {
         </button>
         
         <div className="nav-brand">
-          <span className="nav-logo">📝</span>
+          <span className="nav-logo">N</span>
           <span className="nav-title">Notes Manager</span>
         </div>
         

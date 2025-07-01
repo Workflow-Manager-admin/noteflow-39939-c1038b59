@@ -23,7 +23,7 @@ const FrontPage = () => {
       <div className="front-page-container">
         <header className="front-page-header">
           <div className="brand-logo">
-            <span className="logo-icon">📝</span>
+            <span className="logo-icon">N</span>
             <h1 className="brand-title">Notes Manager</h1>
           </div>
           <p className="brand-tagline">Your thoughts, organized beautifully</p>
@@ -45,28 +45,28 @@ const FrontPage = () => {
             <h3 className="features-title">What you can do</h3>
             <div className="features-grid">
               <div className="feature-card">
-                <div className="feature-icon">✏️</div>
+                <div className="feature-icon">Edit</div>
                 <h4 className="feature-title">Create & Edit</h4>
                 <p className="feature-description">
                   Easily create new notes and edit existing ones with our intuitive editor
                 </p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon">🗂️</div>
+                <div className="feature-icon">Organize</div>
                 <h4 className="feature-title">Organize</h4>
                 <p className="feature-description">
                   Keep your notes organized with timestamps and search functionality
                 </p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon">🌙</div>
+                <div className="feature-icon">Theme</div>
                 <h4 className="feature-title">Dark Mode</h4>
                 <p className="feature-description">
                   Switch between light and dark themes for comfortable viewing
                 </p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon">📱</div>
+                <div className="feature-icon">Mobile</div>
                 <h4 className="feature-title">Responsive</h4>
                 <p className="feature-description">
                   Access your notes from any device with our responsive design
@@ -92,7 +92,7 @@ const FrontPage = () => {
 
         <footer className="front-page-footer">
           <p className="footer-text">
-            Built with ❤️ for productivity enthusiasts
+            Built with care for productivity enthusiasts
           </p>
         </footer>
       </div>
